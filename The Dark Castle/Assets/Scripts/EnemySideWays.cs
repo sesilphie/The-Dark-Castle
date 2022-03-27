@@ -24,18 +24,26 @@ public class EnemySideWays : MonoBehaviour
             if (transform.position.x > batasKiri)
             {
                 transform.position = new Vector3(transform.position.x - speed * Time.deltaTime, transform.position.y, transform.position.z);
+                transform.localScale = new Vector2(-0.15f, 0.15f);
             }
             else
+            {
                 moveLeft = false;
+                transform.localScale = new Vector2(0.15f, 0.15f);
+            }
         }
         else
         {
             if (transform.position.x < batasKanan)
             {
                 transform.position = new Vector3(transform.position.x + speed * Time.deltaTime, transform.position.y, transform.position.z);
+                transform.localScale = new Vector2(0.15f, 0.15f);
             }
             else
+            {
                 moveLeft = true;
+                transform.localScale = new Vector2(-0.15f, 0.15f);
+            }
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
