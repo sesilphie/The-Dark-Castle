@@ -20,8 +20,4 @@ public class HealthBar : MonoBehaviour
     {
         CurrentHealthBar.fillAmount = PlayerHP.currentHP / 10;
     }
-    public void AddHealth(float health)
-    {
-
-    }
 }
