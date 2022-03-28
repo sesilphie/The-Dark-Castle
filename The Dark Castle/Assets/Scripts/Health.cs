@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -30,6 +31,9 @@ public class Health : MonoBehaviour
         {
             //player hurt
             animator.SetTrigger("hurt");
+
+            //BossEnemy hurt
+            animator.SetTrigger("bossHurt");
             //iframes
             StartCoroutine(AntiDamage());
         }
@@ -37,18 +41,36 @@ public class Health : MonoBehaviour
         {
             if (!dead)
             {
-                //player die
-                animator.SetTrigger("die");
+                //Minion Orange Die
+                if (GetComponent<EnemySideWays>() != null)
+                {
+                    //GetComponent<EnemySideWays>().enabled = false;
+                    //animator.SetTrigger("dieMinionOrange");
+                    Destroy(gameObject);
+                }
+
                 //player
-                if(GetComponent<PlayerMovement>()!=null)
-                  GetComponent<PlayerMovement>().enabled = false;
-
+                if (GetComponent<PlayerMovement>() != null)
+                {
+                    //Reset Scene atau restart gameplay
+                    //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                    GetComponent<PlayerMovement>().enabled = false;
+                    //player die
+                    animator.SetTrigger("die");
+                }
+                  
                 //boss enemy
-                if(GetComponentInParent<BossPatrol>()!=null)
-                  GetComponentInParent<BossPatrol>().enabled = false;
+                if (GetComponentInParent<BossPatrol>() != null)
+                {
+                    GetComponentInParent<BossPatrol>().enabled = false;
+                }
 
-                if(GetComponent<BossEnemy>()!=null)
-                  GetComponent<BossEnemy>().enabled = false;
+                //Boss Enemy Die
+                if (GetComponent<BossEnemy>() != null)
+                {
+                    GetComponent<BossEnemy>().enabled = false;
+                    animator.SetTrigger("bossDie");
+                }
                 
                 dead = true;
             }

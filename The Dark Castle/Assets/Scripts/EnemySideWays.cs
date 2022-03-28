@@ -16,6 +16,7 @@ public class EnemySideWays : MonoBehaviour
         batasKiri = transform.position.x - MoveDistance;
         batasKanan = transform.position.x + MoveDistance;
     }
+
     private void Update()
     {
         //gerakan musuh

@@ -11,15 +11,25 @@ public class PlayerMovement : MonoBehaviour
     public float JumpPower = 0f;
     public LayerMask GroundLayer;
     public LayerMask WallLayer;
+    public GameObject FallDetector;
     private float horizontalInput = 0f;
-    
-    
+    private Vector3 respawnPoint;
     float wallJumpCoolDown = 0f;
+
+    [Header ("Camera")]
+    public Transform FirstRoom;
+    public CameraController Cam;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         collider = GetComponent<BoxCollider2D>();
+        
+    }
+    private void Start()
+    {
+        respawnPoint = transform.position;
     }
 
     // Update is called once per frame
@@ -58,6 +68,16 @@ public class PlayerMovement : MonoBehaviour
         {
             wallJumpCoolDown += Time.deltaTime;
         }
+
+        FallDetector.transform.position = new Vector2(FallDetector.transform.position.x, FallDetector.transform.position.y);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "FallDetector")
+        {
+            transform.position = respawnPoint;
+            Cam.MoveToNewRoom(FirstRoom);
+        }
     }
     private void Jump()
     {
@@ -79,11 +99,6 @@ public class PlayerMovement : MonoBehaviour
             
         }
     }
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.tag == "Ground")
-    //        grounded = true;
-    //}
 
     private bool IsGrounded()
     {

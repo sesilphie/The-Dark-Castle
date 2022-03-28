@@ -38,8 +38,6 @@ public class BossEnemy : MonoBehaviour
                 anim.SetTrigger("bossAttack");
                 Fireballs[FindFireball()].transform.position=FirePoint.position;
                 Fireballs[FindFireball()].GetComponent<BossFireball>().SetDirection(Mathf.Sign(transform.localScale.x));
-                
-                
 
             }
 
