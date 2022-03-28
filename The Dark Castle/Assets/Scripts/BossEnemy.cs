@@ -38,12 +38,16 @@ public class BossEnemy : MonoBehaviour
                 anim.SetTrigger("bossAttack");
                 Fireballs[FindFireball()].transform.position=FirePoint.position;
                 Fireballs[FindFireball()].GetComponent<BossFireball>().SetDirection(Mathf.Sign(transform.localScale.x));
+                
+                
 
             }
 
         }
         
     }
+    
+
     private int FindFireball()
     {
         for(int i=0; i<Fireballs.Length; i++)
@@ -74,7 +78,7 @@ public class BossEnemy : MonoBehaviour
         Gizmos.DrawWireCube(boxCollider.bounds.center+ transform.right*range *transform.localScale.x*colliderDistance,
          new Vector3(boxCollider.bounds.size.x*range,boxCollider.bounds.size.y,boxCollider.bounds.size.z));
     }
-    private void DamagePlayer()
+    /*private void DamagePlayer()
     {
         //player didlm range
         if(PlayerInSight())
@@ -82,5 +86,5 @@ public class BossEnemy : MonoBehaviour
             playerHealth.Damage(damage);
 
         }
-    }
+    }*/
 }

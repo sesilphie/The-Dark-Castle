@@ -31,6 +31,10 @@ public class BossFireball : MonoBehaviour
         hit =true;
         boxCollider.enabled=false;
         anim.SetTrigger("explode");
+         if (collision.tag == "Player")
+        {
+            collision.GetComponent<Health>().Damage(1);
+        }
     }
 
     public void SetDirection(float _direction)

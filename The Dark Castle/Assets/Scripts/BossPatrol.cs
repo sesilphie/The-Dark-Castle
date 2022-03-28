@@ -15,6 +15,10 @@ public class BossPatrol : MonoBehaviour
     public float speed;
     private Vector3 initScale;
     private bool movingLeft;
+
+    [Header ("Idle Behaviour")]
+    public float IdleDuration;
+    private float idleTimer;
     
     [Header("Boss Enemy Animator")]
     public Animator anim;
@@ -49,11 +53,18 @@ public class BossPatrol : MonoBehaviour
     private void DirectionChange()
     {
         anim.SetBool("moving",false);
-        movingLeft =!movingLeft;
+
+        idleTimer+=Time.deltaTime;
+        if(idleTimer>IdleDuration)
+        {
+            movingLeft =!movingLeft;
+        }
+        
     }
     
     private void MoveInDirection(int _direction)
     {
+        idleTimer=0;
         anim.SetBool("moving",true);
         //enemy hadap ke direction
         enemyBoss.localScale=new Vector3(Mathf.Abs(initScale.x)*_direction, initScale.y,initScale.z );

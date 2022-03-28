@@ -8,7 +8,7 @@ public class Health : MonoBehaviour
     public float HP;
     public float currentHP { get; private set; }
     Animator animator;
-    private bool dead;
+    private bool dead ;
 
     [Header("iFrames")]
     public float iFramesDuration;
@@ -39,7 +39,17 @@ public class Health : MonoBehaviour
             {
                 //player die
                 animator.SetTrigger("die");
-                GetComponent<PlayerMovement>().enabled = false;
+                //player
+                if(GetComponent<PlayerMovement>()!=null)
+                  GetComponent<PlayerMovement>().enabled = false;
+
+                //boss enemy
+                if(GetComponentInParent<BossPatrol>()!=null)
+                  GetComponentInParent<BossPatrol>().enabled = false;
+
+                if(GetComponent<BossEnemy>()!=null)
+                  GetComponent<BossEnemy>().enabled = false;
+                
                 dead = true;
             }
         }
