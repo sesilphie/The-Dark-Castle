@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a7584517a81c6e74c97c9278010ae8a9
+guid: 5d37fc0210d046c4285b95eb0986c76c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7323559391725314773
-    second: IMG_0711-removebg-preview_0
+      213: 6948079337666467917
+    second: btn exit hov_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -94,7 +94,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_0711-removebg-preview_0
+      name: btn exit hov_0
       rect:
         serializedVersion: 2
         x: 23
@@ -108,8 +108,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2d9cbcf88d7d5a90800000000000000
-      internalID: -7323559391725314773
+      spriteID: d4857d858598c6060800000000000000
+      internalID: 6948079337666467917
       vertices: []
       indices: 
       edges: []

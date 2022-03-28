@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ad964fecd41e8664281af0645162d1ec
+guid: f1814bddd9d0e824cbc9d84523f1259d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1479159887819900038
-    second: IMG_0707-removebg-preview_0
+      213: -6554629391529255256
+    second: btn control hov_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -94,11 +94,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_0707-removebg-preview_0
+      name: btn control hov_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 266
+        x: 23
+        y: 250
         width: 378
         height: 91
       alignment: 0
@@ -108,8 +108,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 684038fb418078410800000000000000
-      internalID: 1479159887819900038
+      spriteID: 8ae509bdb474905a0800000000000000
+      internalID: -6554629391529255256
       vertices: []
       indices: 
       edges: []

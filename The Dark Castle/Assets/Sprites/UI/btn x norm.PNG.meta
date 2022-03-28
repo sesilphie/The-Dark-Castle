@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 91c563037a6c78843a1d54926ff7a7f8
+guid: bd2db8d6046f7a740bdb7bc8724e9142
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5969387545932336287
-    second: IMG_0712-removebg-preview_0
+      213: -4691698375358115161
+    second: btn x norm_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -94,13 +94,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_0712-removebg-preview_0
+      name: btn x norm_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 250
-        width: 378
-        height: 91
+        x: 827
+        y: 1429
+        width: 859
+        height: 836
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -108,8 +108,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9c00f9885687d250800000000000000
-      internalID: 5969387545932336287
+      spriteID: 7a2908f6f2db3eeb0800000000000000
+      internalID: -4691698375358115161
       vertices: []
       indices: 
       edges: []

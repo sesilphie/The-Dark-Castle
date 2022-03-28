@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f7d3068edaa11444a8ef0d1d9f18fe16
+guid: e19c5aa641b691b4084dbaa9911e7a4e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 380068960093859131
-    second: IMG_0728_0
+      213: -4276907685290579912
+    second: btn exit norm_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -94,13 +94,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_0728_0
+      name: btn exit norm_0
       rect:
         serializedVersion: 2
-        x: 794
-        y: 1399
-        width: 859
-        height: 837
+        x: 23
+        y: 244
+        width: 378
+        height: 91
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -108,8 +108,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3deb8c94b6464500800000000000000
-      internalID: 380068960093859131
+      spriteID: 838ed19ce1f55a4c0800000000000000
+      internalID: -4276907685290579912
       vertices: []
       indices: 
       edges: []
