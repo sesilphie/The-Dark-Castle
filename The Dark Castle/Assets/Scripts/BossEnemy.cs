@@ -22,7 +22,6 @@ public class BossEnemy : MonoBehaviour
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        
     }
     private void Update()
     {
@@ -38,7 +37,6 @@ public class BossEnemy : MonoBehaviour
                 anim.SetTrigger("bossAttack");
                 Fireballs[FindFireball()].transform.position=FirePoint.position;
                 Fireballs[FindFireball()].GetComponent<BossFireball>().SetDirection(Mathf.Sign(transform.localScale.x));
-
             }
 
         }
@@ -76,13 +74,4 @@ public class BossEnemy : MonoBehaviour
         Gizmos.DrawWireCube(boxCollider.bounds.center+ transform.right*range *transform.localScale.x*colliderDistance,
          new Vector3(boxCollider.bounds.size.x*range,boxCollider.bounds.size.y,boxCollider.bounds.size.z));
     }
-    /*private void DamagePlayer()
-    {
-        //player didlm range
-        if(PlayerInSight())
-        {
-            playerHealth.Damage(damage);
-
-        }
-    }*/
 }

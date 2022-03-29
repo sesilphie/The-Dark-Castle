@@ -12,7 +12,9 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask GroundLayer;
     public LayerMask WallLayer;
     public GameObject FallDetector;
+    
     private float horizontalInput = 0f;
+    //respawning
     private Vector3 respawnPoint;
     float wallJumpCoolDown = 0f;
 
@@ -50,7 +52,6 @@ public class PlayerMovement : MonoBehaviour
         //Mekanik Wall Jump
         if (wallJumpCoolDown > 0.2f)
         {
-
             rb.velocity = new Vector2(horizontalInput * MoveSpeed, rb.velocity.y);
 
             if (OnWall() && !IsGrounded())
@@ -75,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(collision.tag == "FallDetector")
         {
+            gameObject.GetComponent<Health>().Damage(1);
             transform.position = respawnPoint;
             Cam.MoveToNewRoom(FirstRoom);
         }
@@ -96,7 +98,6 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * 2, 5);
 
             wallJumpCoolDown = 0f;
-            
         }
     }
 
