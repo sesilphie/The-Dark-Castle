@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameObject PausePanel;
     public static Rigidbody2D rb;
     Animator animator;
     new BoxCollider2D collider;
@@ -21,6 +22,11 @@ public class PlayerMovement : MonoBehaviour
     [Header ("Camera")]
     public Transform FirstRoom;
     public CameraController Cam;
+
+    void OnPause()
+    {
+
+    }
 
     private void Awake()
     {
