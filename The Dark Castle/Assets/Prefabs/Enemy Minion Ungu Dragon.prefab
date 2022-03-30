@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 535909906779746660}
   - component: {fileID: 535909906779746663}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Kepala
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 535909907173925057}
   - component: {fileID: 535909907173925056}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Tangan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 535909907291816725}
   - component: {fileID: 535909907291816724}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Badan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +258,8 @@ GameObject:
   - component: {fileID: 535909908038797946}
   - component: {fileID: 535909908038797948}
   - component: {fileID: 535909908038797949}
-  m_Layer: 0
+  - component: {fileID: 5714563331382980360}
+  m_Layer: 11
   m_Name: Enemy Minion Ungu Dragon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -358,6 +359,21 @@ MonoBehaviour:
   - {fileID: 578200771834900020}
   - {fileID: 578200771834900020}
   FirePoint: {fileID: 535909908515564644}
+--- !u!114 &5714563331382980360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535909908038797944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f678153c9fe2ef54d8a492ff5af22635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 1
+  iFramesDuration: 1
+  numberOfFlash: 2
 --- !u!1 &535909908259958539
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,7 +384,7 @@ GameObject:
   m_Component:
   - component: {fileID: 535909908259958538}
   - component: {fileID: 535909908259958541}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Kaki Blkg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -449,7 +465,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 535909908336000690}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Fireball Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -489,7 +505,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 535909908515564644}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Fire Point Minion
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -520,7 +536,7 @@ GameObject:
   m_Component:
   - component: {fileID: 535909908766249853}
   - component: {fileID: 535909908766249852}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Kaki Depan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -648,6 +664,10 @@ PrefabInstance:
       value: Boss Enemy Fireball (3)
       objectReference: {fileID: 0}
     - target: {fileID: 1110631750909583711, guid: 574c6a83695ec3f4c8953364a915659a, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110631750909583711, guid: 574c6a83695ec3f4c8953364a915659a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -712,6 +732,10 @@ PrefabInstance:
     - target: {fileID: 1110631750909583711, guid: 574c6a83695ec3f4c8953364a915659a, type: 3}
       propertyPath: m_Name
       value: Boss Enemy Fireball (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110631750909583711, guid: 574c6a83695ec3f4c8953364a915659a, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1110631750909583711, guid: 574c6a83695ec3f4c8953364a915659a, type: 3}
       propertyPath: m_IsActive
@@ -785,6 +809,10 @@ PrefabInstance:
       value: Boss Enemy Fireball (7)
       objectReference: {fileID: 0}
     - target: {fileID: 1110631750909583711, guid: 574c6a83695ec3f4c8953364a915659a, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110631750909583711, guid: 574c6a83695ec3f4c8953364a915659a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -851,6 +879,10 @@ PrefabInstance:
       value: Boss Enemy Fireball (8)
       objectReference: {fileID: 0}
     - target: {fileID: 1110631750909583711, guid: 574c6a83695ec3f4c8953364a915659a, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110631750909583711, guid: 574c6a83695ec3f4c8953364a915659a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -915,6 +947,10 @@ PrefabInstance:
     - target: {fileID: 1110631750909583711, guid: 574c6a83695ec3f4c8953364a915659a, type: 3}
       propertyPath: m_Name
       value: Boss Enemy Fireball (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110631750909583711, guid: 574c6a83695ec3f4c8953364a915659a, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1110631750909583711, guid: 574c6a83695ec3f4c8953364a915659a, type: 3}
       propertyPath: m_IsActive
@@ -988,6 +1024,10 @@ PrefabInstance:
       value: Boss Enemy Fireball (2)
       objectReference: {fileID: 0}
     - target: {fileID: 1110631750909583711, guid: 574c6a83695ec3f4c8953364a915659a, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110631750909583711, guid: 574c6a83695ec3f4c8953364a915659a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -1059,6 +1099,10 @@ PrefabInstance:
       value: Boss Enemy Fireball (6)
       objectReference: {fileID: 0}
     - target: {fileID: 1110631750909583711, guid: 574c6a83695ec3f4c8953364a915659a, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110631750909583711, guid: 574c6a83695ec3f4c8953364a915659a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -1123,6 +1167,10 @@ PrefabInstance:
     - target: {fileID: 1110631750909583711, guid: 574c6a83695ec3f4c8953364a915659a, type: 3}
       propertyPath: m_Name
       value: Boss Enemy Fireball (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110631750909583711, guid: 574c6a83695ec3f4c8953364a915659a, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1110631750909583711, guid: 574c6a83695ec3f4c8953364a915659a, type: 3}
       propertyPath: m_IsActive
@@ -1191,6 +1239,10 @@ PrefabInstance:
       value: Boss Enemy Fireball (5)
       objectReference: {fileID: 0}
     - target: {fileID: 1110631750909583711, guid: 574c6a83695ec3f4c8953364a915659a, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110631750909583711, guid: 574c6a83695ec3f4c8953364a915659a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -1255,6 +1307,10 @@ PrefabInstance:
     - target: {fileID: 1110631750909583711, guid: 574c6a83695ec3f4c8953364a915659a, type: 3}
       propertyPath: m_Name
       value: Boss Enemy Fireball
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110631750909583711, guid: 574c6a83695ec3f4c8953364a915659a, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1110631750909583711, guid: 574c6a83695ec3f4c8953364a915659a, type: 3}
       propertyPath: m_IsActive

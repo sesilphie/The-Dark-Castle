@@ -44,8 +44,14 @@ public class Health : MonoBehaviour
                 //Minion Orange Die
                 if (GetComponent<EnemySideWays>() != null)
                 {
-                    //GetComponent<EnemySideWays>().enabled = false;
-                    //animator.SetTrigger("dieMinionOrange");
+                    GetComponent<EnemySideWays>().enabled = false;
+                    ExplodeParticle.Instance.Explode(transform.position);
+                    Destroy(gameObject);
+                }
+                //Minion Purple Die
+                if (GetComponent<Enemy>() != null)
+                {
+                    ExplodeParticle.Instance.Explode(transform.position);
                     Destroy(gameObject);
                 }
 
