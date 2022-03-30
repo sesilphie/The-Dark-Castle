@@ -10,6 +10,7 @@ public class Dialog : MonoBehaviour
    private int i;
    public float typeSpeed;
    public GameObject continueBtn;
+   public GameObject textPanel;
    public Animator textAnim;
 
    void Start()
@@ -46,6 +47,7 @@ public class Dialog : MonoBehaviour
        }
        else
        {
+           textPanel.SetActive(false);
            continueBtn.SetActive(false);
            textDisplay.text="";
        }
