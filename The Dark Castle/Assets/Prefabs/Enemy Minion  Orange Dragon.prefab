@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 6298724747614524180}
   - component: {fileID: 802294218853382574}
   m_Layer: 11
-  m_Name: Enemy Minion  Orange New
+  m_Name: Enemy Minion  Orange Dragon
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

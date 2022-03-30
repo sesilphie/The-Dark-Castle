@@ -6,7 +6,7 @@ public class GameState : Singleton<GameState>
 {
     public enum States
     {
-        Playing, Paused, Win, Lose, BossArena
+        Playing, Paused, Win, Lose
     }
 
     public States CurrentState;
@@ -36,11 +36,7 @@ public class GameState : Singleton<GameState>
     {
         return CurrentState == States.Win;
     }
-    public bool IsBossArena()
-    {
-        return CurrentState == States.BossArena;
-    }
-
+  
     public bool IsLose()
     {
         return CurrentState == States.Lose;

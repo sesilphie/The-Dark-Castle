@@ -6,16 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Level 1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 29235eb1d6c6f8248b79e284ac5eb845
   - enabled: 1
-    path: Assets/Scenes/Control.unity
-    guid: a3e4d2765c196f3488251f8c78bcd7b8
-  - enabled: 1
     path: Assets/Scenes/Cutscene Intro.unity
     guid: 48314908106b98a44bbddd864dcd6b6e
+  - enabled: 1
+    path: Assets/Scenes/Cutscene Zirag.unity
+    guid: dc25343ab1dfe49478e3e002ce2bbed8
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Control.unity
+    guid: a3e4d2765c196f3488251f8c78bcd7b8
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: e95d6f1fcdd8f0049a9f1411bb12d914, type: 2}

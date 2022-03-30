@@ -12,6 +12,7 @@ public class Dialog : MonoBehaviour
    public GameObject continueBtn;
    public GameObject textPanel;
    public Animator textAnim;
+   public GameObject continuePlay;
 
    void Start()
    {
@@ -47,7 +48,8 @@ public class Dialog : MonoBehaviour
        }
        else
        {
-           textPanel.SetActive(false);
+           continuePlay.SetActive(true);
+           textPanel.SetActive(true);
            continueBtn.SetActive(false);
            textDisplay.text="";
        }
