@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemySideWays : MonoBehaviour
 {
+    public ParticleSystem ExplodeEffect;
     public float Damage;
     public float MoveDistance;
     public float speed;

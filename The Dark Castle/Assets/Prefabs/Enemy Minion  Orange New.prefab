@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 802294218853382574}
   m_Layer: 11
   m_Name: Enemy Minion  Orange New
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -316,6 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca843981a22a314a85dd6355cc3c878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ExplodeEffect: {fileID: 3750830526383381618, guid: 24f7234bf0fab394aa04f9b4e1643bc0, type: 3}
   Damage: 1
   MoveDistance: 2
   speed: 2
@@ -357,6 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f678153c9fe2ef54d8a492ff5af22635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ExplodeEffect: {fileID: 3750830526383381618, guid: 24f7234bf0fab394aa04f9b4e1643bc0, type: 3}
   HP: 1
   iFramesDuration: 1
   numberOfFlash: 2

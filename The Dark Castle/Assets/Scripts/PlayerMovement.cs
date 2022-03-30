@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public GameObject PausePanel;
+    public GameObject PausePanel, WinPanel;
     public static Rigidbody2D rb;
     Animator animator;
     new BoxCollider2D collider;
@@ -23,9 +23,22 @@ public class PlayerMovement : MonoBehaviour
     public Transform FirstRoom;
     public CameraController Cam;
 
-    void OnPause()
+    void OnPaused()
     {
+        switch (GameState.Instance.CurrentState)
+        {
+            case GameState.States.Playing:
+                GameState.Instance.CurrentState = GameState.States.Paused;
+                PausePanel.SetActive(true);
+                Time.timeScale = 0f;
+                break;
 
+            //case GameState.States.Paused:
+            //    GameState.Instance.CurrentState = GameState.States.Playing;
+            //    PausePanel.SetActive(false);
+            //    Time.timeScale = 1f;
+            //    break;
+        }
     }
 
     private void Awake()
@@ -38,11 +51,15 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         respawnPoint = transform.position;
+        //Ganti state menjadi Playing
+        GameState.Instance.CurrentState = GameState.States.Playing;
     }
 
     // Update is called once per frame
     void Update()
     {
+        WinPanel.SetActive(GameState.Instance.IsWin());
+
         horizontalInput = Input.GetAxis("Horizontal");
        
         //flip player when moving left-right
@@ -82,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(collision.tag == "FallDetector")
         {
-            gameObject.GetComponent<Health>().Damage(1);
+            gameObject.GetComponent<Health>().Damage(0.5f);
             transform.position = respawnPoint;
             Cam.MoveToNewRoom(FirstRoom);
         }

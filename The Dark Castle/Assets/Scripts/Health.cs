@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
-    [Header ("Health")] //Buat Header
+    [Header("Health")] //Buat Header
+    public ParticleSystem ExplodeEffect;
     public float HP;
     public float currentHP { get; private set; }
     Animator animator;
@@ -41,28 +42,34 @@ public class Health : MonoBehaviour
         {
             if (!dead)
             {
+                
                 //Minion Orange Die
                 if (GetComponent<EnemySideWays>() != null)
                 {
                     GetComponent<EnemySideWays>().enabled = false;
-                    ExplodeParticle.Instance.Explode(transform.position);
+                    Instantiate(ExplodeEffect, transform.position, Quaternion.identity);
                     Destroy(gameObject);
+                    //ExplodeParticle.Instance.Explode(transform.position);
+
                 }
                 //Minion Purple Die
                 if (GetComponent<Enemy>() != null)
                 {
-                    ExplodeParticle.Instance.Explode(transform.position);
+                    Instantiate(ExplodeEffect, transform.position, Quaternion.identity);
+                    //ExplodeParticle.Instance.Explode(transform.position);
                     Destroy(gameObject);
                 }
 
                 //player
                 if (GetComponent<PlayerMovement>() != null)
                 {
-                    //Reset Scene atau restart gameplay
-                    //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                     GetComponent<PlayerMovement>().enabled = false;
                     //player die
                     animator.SetTrigger("die");
+
+                    //restart gameplay
+                    //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                    //Application.LoadLevel(Application.loadedLevel);
                 }
                   
                 //boss enemy
@@ -81,6 +88,14 @@ public class Health : MonoBehaviour
                 dead = true;
             }
         }
+    }
+    public void PlayerWin()
+    {
+        GameState.Instance.CurrentState = GameState.States.Win;
+    }
+    public void PlayerLose()
+    {
+        GameState.Instance.CurrentState = GameState.States.Lose;
     }
     public void AddHealth(float health)
     {

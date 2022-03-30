@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2680600203075676471}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.53000003, y: -0.45999992, z: -1}
   m_LocalScale: {x: -1.5, y: 1.5, z: 1}
   m_Children:
@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d6ca38e617734441ac881327ccea247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LosePanel: {fileID: 0}
   attackCooldown: 1
   range: 6.93
   colliderDistance: 0.3
@@ -176,6 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f678153c9fe2ef54d8a492ff5af22635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ExplodeEffect: {fileID: 3750830526383381618, guid: 24f7234bf0fab394aa04f9b4e1643bc0, type: 3}
   HP: 3
   iFramesDuration: 1
   numberOfFlash: 2

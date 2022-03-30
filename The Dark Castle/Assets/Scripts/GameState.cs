@@ -2,17 +2,51 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameState : MonoBehaviour
+public class GameState : Singleton<GameState>
 {
-    // Start is called before the first frame update
-    void Start()
+    public enum States
     {
-        
+        Playing, Paused, Win, Lose, BossArena
     }
 
-    // Update is called once per frame
-    void Update()
+    public States CurrentState;
+
+    private int killCount;
+    int targetKill = 7;
+    public int KillCount
     {
-        
+        get => killCount;
+        set
+        {
+            killCount = value;
+            //Pengecekan kondisi menang
+            if (killCount == targetKill && CurrentState == States.Playing)
+            {
+                CurrentState = States.Win;
+            }
+        }
+    }
+
+    public bool IsPlaying()
+    {
+        return CurrentState == States.Playing;
+    }
+
+    public bool IsWin()
+    {
+        return CurrentState == States.Win;
+    }
+    public bool IsBossArena()
+    {
+        return CurrentState == States.BossArena;
+    }
+
+    public bool IsLose()
+    {
+        return CurrentState == States.Lose;
+    }
+    public bool IsPaused()
+    {
+        return CurrentState == States.Paused;
     }
 }

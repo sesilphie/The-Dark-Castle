@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 5714563331382980360}
   m_Layer: 11
   m_Name: Enemy Minion Ungu Dragon
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -316,7 +316,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.612627, y: -0.7495303}
@@ -371,6 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f678153c9fe2ef54d8a492ff5af22635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ExplodeEffect: {fileID: 3750830526383381618, guid: 24f7234bf0fab394aa04f9b4e1643bc0, type: 3}
   HP: 1
   iFramesDuration: 1
   numberOfFlash: 2

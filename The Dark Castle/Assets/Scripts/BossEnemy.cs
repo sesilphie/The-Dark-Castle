@@ -5,6 +5,8 @@ using UnityEngine;
 public class BossEnemy : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject LosePanel;
+
     public float attackCooldown;
     public float range;
     public float colliderDistance;
@@ -25,7 +27,9 @@ public class BossEnemy : MonoBehaviour
     }
     private void Update()
     {
-        cooldownTimer+=Time.deltaTime;
+        LosePanel.SetActive(GameState.Instance.IsLose());
+
+        cooldownTimer +=Time.deltaTime;
         
         //serang saat player muncul
         if(PlayerInSight())
