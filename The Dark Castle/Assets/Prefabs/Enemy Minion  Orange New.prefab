@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3374310747120145834}
   - component: {fileID: 3374310747120145835}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Kaki Belakang
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3374310747448395329}
   - component: {fileID: 3374310747448395390}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Badan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3374310747826421894}
   - component: {fileID: 3374310747826421895}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Kaki Depan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 3374310748041604941}
   - component: {fileID: 6298724747614524180}
   - component: {fileID: 802294218853382574}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy Minion  Orange New
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 1.6937423, y: -0.500967}
@@ -370,7 +370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3374310748389361930}
   - component: {fileID: 3374310748389361931}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Tangan Depan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,7 +452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3374310748564926487}
   - component: {fileID: 3374310748564926484}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Kepala
   m_TagString: Untagged
   m_Icon: {fileID: 0}
