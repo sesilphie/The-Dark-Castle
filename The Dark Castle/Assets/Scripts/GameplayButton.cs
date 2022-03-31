@@ -7,11 +7,6 @@ public class GameplayButton : MonoBehaviour
 {
     public GameObject PauseMenu;
 
-    //public void Pause()
-    //{
-    //    PauseMenu.SetActive(true);
-    //    Time.timeScale = 0f;
-    //}
     public void Continue()
     {
         GameState.Instance.CurrentState = GameState.States.Playing;

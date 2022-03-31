@@ -30,11 +30,17 @@ public class Health : MonoBehaviour
 
         if (currentHP > 0)
         {
-            //player hurt
-            animator.SetTrigger("hurt");
-
-            //BossEnemy hurt
-            animator.SetTrigger("bossHurt");
+            if (GetComponent<PlayerMovement>() != null)
+            {
+                //player hurt
+                animator.SetTrigger("hurt");
+            }
+            if (GetComponent<BossEnemy>() != null)
+            {
+                //BossEnemy hurt
+                animator.SetTrigger("bossHurt");
+            }
+                
             //iframes
             StartCoroutine(AntiDamage());
         }
@@ -42,21 +48,18 @@ public class Health : MonoBehaviour
         {
             if (!dead)
             {
-                
                 //Minion Orange Die
                 if (GetComponent<EnemySideWays>() != null)
                 {
                     GetComponent<EnemySideWays>().enabled = false;
                     Instantiate(ExplodeEffect, transform.position, Quaternion.identity);
                     Destroy(gameObject);
-                    //ExplodeParticle.Instance.Explode(transform.position);
 
                 }
                 //Minion Purple Die
                 if (GetComponent<Enemy>() != null)
                 {
                     Instantiate(ExplodeEffect, transform.position, Quaternion.identity);
-                    //ExplodeParticle.Instance.Explode(transform.position);
                     Destroy(gameObject);
                 }
 
@@ -66,10 +69,6 @@ public class Health : MonoBehaviour
                     GetComponent<PlayerMovement>().enabled = false;
                     //player die
                     animator.SetTrigger("die");
-
-                    //restart gameplay
-                    //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                    //Application.LoadLevel(Application.loadedLevel);
                 }
                   
                 //boss enemy

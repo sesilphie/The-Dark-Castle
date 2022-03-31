@@ -32,12 +32,6 @@ public class PlayerMovement : MonoBehaviour
                 PausePanel.SetActive(true);
                 Time.timeScale = 0f;
                 break;
-
-            //case GameState.States.Paused:
-            //    GameState.Instance.CurrentState = GameState.States.Playing;
-            //    PausePanel.SetActive(false);
-            //    Time.timeScale = 1f;
-            //    break;
         }
     }
 

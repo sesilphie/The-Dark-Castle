@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    // Start is called before the first frame update
     public float attackCooldown;
     public float range;
     public float colliderDistance;
